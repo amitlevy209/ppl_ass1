@@ -1,0 +1,23 @@
+#lang racket/base
+
+(define (empty? lst)
+  (null? lst))
+
+(define append
+    (lambda (l1 l2)
+    (if (empty? l1)
+      l2
+      (cons (car l1) (append (cdr l1) l2)))))
+
+
+(define reverse
+    (lambda (l)
+    (if (empty? l)
+      '()
+     (append(reverse(cdr l)) (list (car l))))))
+
+
+(define duplicate-items
+    (lambda (lst, dup-count)
+    @todo    
+))
